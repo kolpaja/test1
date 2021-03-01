@@ -1,1 +1,16 @@
-<p>add works!</p>
+<h1> Template-Based Contact Form Example</h1>
+
+<form #myform = "ngForm"  >
+  <input type = "text" name = "fullName" placeholder = "Your full name" [(ngModel)]='localUser.name']>
+  <br/>
+
+  <input type = "email" name = "email" placeholder = "Your email" [(ngModel)]='localUser.email'>
+  <br/>
+
+  <textarea name = "message" placeholder = "Your message" ngModel></textarea>
+  <br/>
+  <input type = "submit" value = "Send">
+  <div>{{localUser.name}}</div>
+  <br/>
+  <button (click)='onSave()'>Save</button>
+</form>
